@@ -1,37 +1,38 @@
-# Sistema WB - Interface Gráfica (Frontend)
+# Sistema de Gerenciamento de Pet Shops e Clínicas Veterinárias
 
-Bem-vindo à documentação oficial do projeto de interface gráfica do Sistema WB. Este projeto foi desenvolvido para o Grupo World Beauty (WB) com o objetivo de modernizar e facilitar o uso do sistema por meio de uma interface web responsiva, intuitiva e acessível em qualquer dispositivo.
+Bem-vindo à documentação oficial do Sistema de Gerenciamento de Pet Shops e Clínicas Veterinárias. Este projeto foi desenvolvido para facilitar o cadastro, atualização, consulta e análise de clientes, produtos e serviços em pet shops e clínicas veterinárias. O sistema é totalmente operado por linha de comando (CLI), sem interface gráfica, e cada unidade possui sua própria base de dados em memória.
 
 ---
 
 ## 📋 Sumário
 
-- [Visão Geral](#visão-geral)
+- [Sobre o Projeto](#sobre-o-projeto)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Como Executar o Projeto](#como-executar-o-projeto)
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Padrões de Desenvolvimento](#padrões-de-desenvolvimento)
-- [Funcionalidades das Telas](#funcionalidades-das-telas)
-- [Customização e Temas](#customização-e-temas)
+- [Funcionalidades](#funcionalidades)
+- [Customização](#customização)
 - [Contribuição](#contribuição)
 - [Contato](#contato)
 
 ---
 
-## Visão Geral
+## Sobre o Projeto
 
-O Sistema WB foi projetado para atender todas as franquias do Grupo World Beauty, proporcionando uma experiência moderna e eficiente para os usuários. A interface gráfica (GUI) foi construída com foco em usabilidade, responsividade e facilidade de navegação, garantindo que qualquer colaborador, independente do dispositivo, consiga operar o sistema sem dificuldades.
+O sistema foi inspirado pelo crescimento do setor pet no Brasil, que mesmo diante de cenários econômicos adversos, segue em expansão, conforme destacado pelo Instituto Pet Brasil (IPB). O setor apresenta mudanças progressivas nos hábitos das famílias, com aumento nas vendas e destaque para o comércio eletrônico e serviços especializados para animais de estimação.
+
+O objetivo é oferecer uma solução simples, eficiente e acessível para a gestão de informações essenciais em pet shops e clínicas veterinárias, permitindo o controle de clientes, produtos e serviços de forma rápida e segura.
 
 ---
 
 ## Tecnologias Utilizadas
 
-- React 18 (componentes de classe)
+- Node.js (CLI)
 - TypeScript
-- Bootstrap 5 (responsividade e design moderno)
-- Jest + Testing Library (testes unitários)
+- Jest (testes unitários)
 
-> **Observação:** O projeto utiliza Bootstrap para estilização e responsividade.
+> **Observação:** O sistema não possui interface gráfica e não utiliza banco de dados externo; todas as informações são mantidas em memória durante a execução.
 
 ---
 
@@ -55,9 +56,6 @@ npm start
 yarn start
 ```
 
-**Acesso:**  
-Abra o navegador e acesse [http://localhost:3000](http://localhost:3000)
-
 ---
 
 ## Estrutura do Projeto
@@ -68,77 +66,53 @@ T2/
   package.json
   tsconfig.json
   README.md
-  public/
-    favicon.ico
-    index.html
-    logo192.png
-    logo512.png
-    manifest.json
-    robots.txt
   src/
-    index.css
-    index.tsx
-    logo.svg
-    react-app-env.d.ts
-    reportWebVitals.ts
-    setupTests.ts
-    componentes/
-      barraNavegacao.tsx
-      formularioCadastroCliente.tsx
-      listaCliente.tsx
-      roteador.tsx
+    index.ts
+    clientes/
+    produtos/
+    servicos/
+    utils/
+    tests/
 ```
 
-- **componentes/**: Todos os componentes React de cada tela e funcionalidade.
-- **index.tsx**: Ponto de entrada da aplicação.
-- **index.css**: Estilos globais e configuração do Bootstrap.
-- **public/**: Arquivos estáticos e HTML base.
+- **clientes/**: Lógica de cadastro, atualização e consulta de clientes.
+- **produtos/**: Gerenciamento de produtos.
+- **servicos/**: Gerenciamento de serviços.
+- **utils/**: Utilitários e funções auxiliares.
+- **tests/**: Testes unitários.
 
 ---
 
 ## Padrões de Desenvolvimento
 
-- **Componentes de Classe:**  
-  Todos os componentes React são implementados como classes, conforme padrão definido pela equipe WB.
-- **Responsividade:**  
-  Layout adaptável para desktop, tablets e celulares usando Bootstrap.
-- **Design Moderno:**  
-  Uso de cores, gradientes e ícones para uma experiência agradável.
-- **Sem Backend:**  
-  Este projeto é um pré-projeto de interface, sem integração com banco de dados ou APIs.
+- **CLI:**  
+  Todas as interações são feitas via linha de comando, sem interface gráfica.
+- **Base de Dados em Memória:**  
+  Cada execução mantém os dados apenas em memória, sem persistência após o encerramento.
+- **Código Modular:**  
+  Separação clara entre clientes, produtos, serviços e utilitários.
+- **Testes# Sistema de Gerenciamento de Pet Shops e Clínicas Veterinárias
+
+Bem-vindo à documentação oficial do Sistema de Gerenciamento de Pet Shops e Clínicas Veterinárias. Este projeto foi desenvolvido para facilitar o cadastro, atualização, consulta e análise de clientes, produtos e serviços em pet shops e clínicas veterinárias. O sistema é totalmente operado por linha de comando (CLI), sem interface gráfica, e cada unidade possui sua própria base de dados em memória.
 
 ---
 
-## Funcionalidades das Telas
+## 📋 Sumário
 
-- **Home:**  
-  Tela inicial com navegação para Clientes e Cadastros.
-
-- **Clientes:**
-  - Atualizar dados do cliente
-  - Excluir cliente (em desenvolvimento)
-  - Listagens especiais (em desenvolvimento)
-
-- **Cadastros:**
-  - Cadastro de Cliente (formulário)
-
----
-
-## Customização e Temas
-
-O tema principal utiliza tons claros, podendo ser facilmente alterado no arquivo `index.css` ou diretamente nos componentes usando as propriedades de tema do Bootstrap.
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Como Executar o Projeto](#como-executar-o-projeto)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Padrões de Desenvolvimento](#padrões-de-desenvolvimento)
+- [Funcionalidades](#funcionalidades)
+- [Customização](#customização)
+- [Contribuição](#contribuição)
+- [Contato](#contato)
 
 ---
 
-## Contribuição
+## Sobre o Projeto
 
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nome`)
-3. Commit suas alterações (`git commit -am 'Adiciona nova feature'`)
-4. Push para o branch (`git push origin feature/nome`)
-5. Abra um Pull Request
+O sistema foi inspirado pelo crescimento do setor pet no Brasil, que mesmo diante de cenários econômicos adversos, segue em expansão, conforme destacado pelo Instituto Pet Brasil (IPB). O setor apresenta mudanças progressivas nos hábitos das famílias, com aumento nas vendas e destaque para o comércio eletrônico e serviços especializados para animais de estimação.
 
----
-
-Desenvolvido para o Grupo World Beauty (WB) - 2025  
-Documentação criada para uso interno e treinamento de colaboradores.
+O objetivo é oferecer uma solução simples, eficiente e acessível para a gestão
